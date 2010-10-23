@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title MyTripApp
+    %link{:href => "http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css", :rel => "stylesheet"}/
+    %script{:src => "http://code.jquery.com/jquery-1.4.3.min.js"}
+    %script{:src => "http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"}
+    = csrf_meta_tag
+  %body
+    %div{"data-role" => "page"}
+      %div{"data-role" => "header", "data-theme" => "b"}
+        = yield :header
+        %h1= @title
+      %div{"data-role" => "content"}  
+        = yield
+      %div{"data-role" => "footer", "data-theme" => "e"}
+        %center Jack Russell Software Company, LLC
