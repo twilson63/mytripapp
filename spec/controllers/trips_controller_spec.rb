@@ -9,7 +9,7 @@ describe TripsController do
   describe "GET index" do
     before do
 
-      Trip.should_receive(:all).and_return([@trip])
+      Trip.should_receive(:where).and_return([@trip])
       get :index
     end
 
