@@ -2,10 +2,9 @@ class AuthenticationsController < ApplicationController
   
   def create
     user_info = request.env["rack.auth"]["user_info"]
-    @user = User.new(
+    @user = User.find_or_create_by_nickname(user_info['nickname'],    
       :name => user_info['name'],
       :email => user_info['email'],
-      :nickname => user_info['nickname'],
       :image_url => user_info['image'],
       :provder => params[:provider]
     )
