@@ -20,4 +20,24 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
   end
   
+  def edit
+    @trip = Trip.find(params[:id])
+    respond_with @trip
+  end
+  
+  def update
+    @trip = Trip.find(params[:id])
+    flash[:notice] = t('trips.update') if @trip.update_attributes(params[:trip])
+    respond_with @trip
+  end
+  
+  def destroy
+    @trip = Trip.find(params[:id])
+    flash[:notice] = t('trips.delete') if @trip.destroy
+    respond_with @trip, :location => trips_path    
+  end
+  
+  
+  
+  
 end
