@@ -6,6 +6,6 @@
 %h4= @trip.name
 %p= @trip.description
 %h3 Details
-%ul{:'data-role' => 'listview'}
+%ul{:'data-role' => 'listview', :'data-inset' => true}
   = render :partial => 'trip/details/detail', :collection => @trip.trip_details
     
