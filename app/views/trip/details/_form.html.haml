@@ -1,0 +1,15 @@
+= form_for [@trip, @trip_detail] do |f|
+  %fieldset
+    %legend
+    = f.label :name
+    = f.text_field :name
+  %fieldset
+    %legend
+    = f.label :value
+    = f.text_field :value
+  %fieldset
+    %legend
+    = f.label :detail_type
+    = f.select :detail_type, TripDetail::DETAIL_TYPES
+  %p
+    = f.submit

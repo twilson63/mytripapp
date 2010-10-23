@@ -1,0 +1,10 @@
+#index{"data-role" => "page"}
+  %div{"data-role" => "header", "data-theme" => "b"}
+    %a{"data-icon" => "info", :href => "/about"} About
+    %h1 Trips
+    %a{"data-icon" => "add", :href => "#{new_trip_path}"} Add
+  %div{"data-role" => "content"}
+    %ul{"data-role" => "listview"}
+      = render @trips
+  %div{"data-role" => "footer", "data-theme" => "e"}
+    %center Jack Russell Software Company, LLC

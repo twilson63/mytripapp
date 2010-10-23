@@ -1,0 +1,15 @@
+#show{"data-role" => "page"}
+  %div{"data-role" => "header", "data-theme" => "b"}
+    = link_to "My Trips", trips_path, :role => 'button'
+    %h1 Trip Details
+    = link_to "Add Detail", new_trip_trip_detail_path(@trip), :role => 'button'
+    
+  %div{"data-role" => "content"}
+    %h1= @trip.name
+    %p= @trip.description
+    %h3 Details
+    %ul{:'data-role' => 'listview'}
+      = render :partial => 'trip/details/detail', :collection => @trip.trip_details
+    
+  %div{"data-role" => "footer", "data-theme" => "e"}
+    %center Jack Russell Software Company, LLC

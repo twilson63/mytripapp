@@ -1,0 +1,25 @@
+#new{"data-role" => "page"}
+  %div{"data-role" => "header", "data-theme" => "b"}
+    %h1 New Trip
+  %div{"data-role" => "content"}
+    = form_for @trip do |f|
+      %fieldset
+        %legend
+        = f.label :name
+        = f.text_field :name
+      %fieldset
+        %legend
+        = f.label :start
+        = f.text_field :start
+      %fieldset
+        %legend
+        = f.label :end
+        = f.text_field :end
+      %fieldset
+        %legend
+        = f.label :description
+        = f.text_area :description
+      %p
+        = f.submit
+  %div{"data-role" => "footer", "data-theme" => "e"}
+    %center Jack Russell Software Company, LLC
