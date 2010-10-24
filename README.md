@@ -4,6 +4,8 @@
 
 This project was just for fun and if there is enough interest, it will continue to be developed.
 
+![screenshot](http://github.com/twilson63/mytripapp/raw/master/public/images/screenshot.png)
+
 ## GOAL
 
 Simply, I am going on vacation and wanted a place to store all my numbers and contact information.
