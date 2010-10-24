@@ -3,5 +3,9 @@
   = link_to "About", "/about", :'data-icon' => 'info'
   = link_to "Add", new_trip_path, :'data-icon' => 'add'        
 
-%ul{"data-role" => "listview"}
+%img{:src => @user.image_url, :style => 'float:right;'}
+%h3= @user.name
+
+%ul{"data-role" => "listview", :'data-inset' => 'true'}
+  %li{:'data-role' => 'list-divider'} Trips
   = render @trips

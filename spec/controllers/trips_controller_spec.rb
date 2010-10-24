@@ -8,12 +8,13 @@ describe TripsController do
 
   describe "GET index" do
     before do
-
+      User.should_receive(:find).and_return(@user)
       Trip.should_receive(:where).and_return([@trip])
       get :index
     end
 
     it { response.should be_success }
+    it { assigns(:user).should eq(@user)}
     it { assigns(:trips).should eq([@trip]) } 
     it { should render_template(:index) }
     it { flash[:notice].should be_nil }

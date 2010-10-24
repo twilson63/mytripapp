@@ -3,6 +3,7 @@ class TripsController < ApplicationController
   before_filter :authenticate!
   
   def index
+    @user = User.find(current_user)
     @trips = Trip.where(:user_id => current_user) 
   end
   

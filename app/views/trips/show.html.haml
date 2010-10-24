@@ -1,11 +1,13 @@
 - @title = 'Trip Details'
 - content_for :header do
-  = link_to "My Trips", trips_path, :role => 'button'
-  = link_to "Add Detail", new_trip_trip_detail_path(@trip), :role => 'button'
+  = link_to "My Trips", trips_path, :role => 'button', :'data-icon' => 'back'
+  = link_to "Add Detail", new_trip_trip_detail_path(@trip), :role => 'button', :'data-icon' => 'add'
 
+%p{:style => 'float:right'}
+  #{@trip.start.strftime('%m/%d/%Y')} - #{@trip.end.strftime('%m/%d/%Y')}
 %h4= @trip.name
 %p= @trip.description
-%h3 Details
-%ul{:'data-role' => 'listview', :'data-inset' => true}
+%ul{:'data-role' => 'listview', :'data-inset' => "true"}
+  %li{:'data-role' => 'list-divider'} Details
   = render :partial => 'trip/details/detail', :collection => @trip.trip_details
     

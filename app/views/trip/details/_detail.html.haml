@@ -1,2 +1,9 @@
 %li
-  = link_to "#{detail.name} - #{detail.value}", edit_trip_trip_detail_path(detail.trip, detail)
+  - if detail.detail_type == "Number"
+    = link_to "#{detail.name}", edit_trip_trip_detail_path(detail.trip, detail)
+    %p{:style => 'margin-top:3px'}= detail.value
+  - elsif detail.detail_type == "Link"
+    = link_to "#{detail.name}", edit_trip_trip_detail_path(detail.trip, detail)
+    %p{:style => 'margin-top:3px'}= detail.value
+    %a{:href => detail.value}= detail.value
+  
