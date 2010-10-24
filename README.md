@@ -8,20 +8,22 @@ This project was just for fun and if there is enough interest, it will continue 
 
 ## GOAL
 
-Simply, I am going on vacation and wanted a place to store all my numbers and contact information.
+For Fun!
 
-While I was printing out all of the paper work with confirmation codes, also downloading movies 
+I am going on vacation and wanted a place to store all my numbers and contact information.
+
+During the process of printing out all of the paper work with confirmation codes, also downloading movies 
 for my 2 year old son to watch, I thought it would be fun to create a simple jQueryMobile application.
 
 So at about 10am on a saturday, I started with just a simple sinatra app connecting to simple db.
 
 Then I hit a wall of frustration with Simple DB and the Data Layer, this was mainly my inexperience 
 with the way simple db stores collections.  So I thought, I wonder how long it would take me to do this 
-app in rails.  I started about 2pm and after working a couple of hours, I got a working app.
+app in rails.  I started about 2pm and after working a couple of hours, I got a working app and have had
+a blast fine tuning it.
 
-Rails 3 has definately made it fun again to ack little apps with rails, and jQuery Mobile, takes
-care of all your mobile work flow needs.
+Rails 3 has definitely made it fun and quick again to hack on little apps with rails.
 
 ## HAVE FUN
 
-I do continue hack, but would love to hear feedback
+Please send any feedback to http://twitter.com/jackhq
